@@ -1,7 +1,7 @@
 
 # vagrant-multiservers
 
-Example of multiple servers orchestration with Vagrant, Ansible and Puppet
+Example of multiple servers orchestration with Vagrant and VirtualBox.
 
 
 ## Prerequisites:

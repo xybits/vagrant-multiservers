@@ -1,19 +1,11 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-PREFERRED_BOX = 'centos7'
 DOMAIN_NAME = 'xybits.vagrant'
-BOXES = {
-  :centos6    => {
-    :box_name => 'centos/6',
-    :memory   => 1024,
-    :cpus     => 1,
-  },
-  :centos7    => {
-    :box_name => 'centos/7',
-    :memory   => 1024,
-    :cpus     => 1,
-  },
+CENTOS7 = {
+  :box_name => 'centos/7',
+  :memory   => 1024,
+  :cpus     => 1,
 }
 
 INSTANCES  = {
@@ -27,7 +19,7 @@ INSTANCES  = {
 
 servers = Hash.new
 INSTANCES.each do |server, spec|
-  servers["#{server}"] = BOXES[:"#{PREFERRED_BOX}"].merge(spec)
+  servers["#{server}"] = CENTOS7.merge(spec)
 end
 
 Vagrant.configure("2") do |config|
